@@ -15,6 +15,7 @@ h1 {
     font-weight: 700;
     font-size: 3rem;
     margin: 1rem 0;
+    line-height: 4rem;
 
 }
 
@@ -24,6 +25,7 @@ h2 {
     font-weight: 700;
     font-size: 2.5rem;
     margin: 1rem 0;
+
 }
 
 p {
@@ -116,7 +118,7 @@ body {
 }
 
 .features * {
-    line-height: 2rem;
+    line-height: 3rem;
     margin: 1rem auto;
     text-align: center;
 }
@@ -161,6 +163,7 @@ body {
         flex-direction: column;
         align-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .left {
@@ -179,12 +182,20 @@ body {
         margin: 2rem auto;
     }
 
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
 
 }
 
 .right {
     width: 100%;
     max-width: 100%;
+
 }
 
 .right,
@@ -456,8 +467,10 @@ footer {
     .footercontainer {
         flex-direction: column;
         margin: 0 auto;
-
     }
+
+
+
 
 }
 
@@ -472,4 +485,8 @@ footer {
 
     .navigation ul {
         margin-top: 2rem;
+    }
+
+    .navigation li {
+        margin: 0 0.7rem;
     }
