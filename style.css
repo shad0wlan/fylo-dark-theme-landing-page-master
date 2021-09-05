@@ -5,6 +5,9 @@
     color: white;
     text-align: center;
     font-size: 14px;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-weight: 400;
 }
 
 h1 {
@@ -111,6 +114,7 @@ body {
     width: 100%;
     max-width: 100%;
 
+
 }
 
 .features * {
@@ -122,6 +126,13 @@ body {
 
 .features img {
     width: 5rem;
+}
+
+@media only screen and (max-width:2155px) and (min-width:1350px) {
+    .features {
+        grid-template-columns: repeat(2, minmax(min(100%, 30rem), 1fr));
+
+    }
 }
 
 .productive {
@@ -137,36 +148,54 @@ body {
 }
 
 .productive img {
-    width: 100%;
+    max-width: 70%;
 }
+
 
 .left {
     margin: 0 auto;
+    width: 50%;
+    max-width: 50%;
+    text-align: right;
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:1300px) {
+
     .productive {
         flex-direction: column;
         align-content: center;
         align-items: center;
-
     }
 
-    .right,
-    h1,
-    p,
-    a {
-        margin: 2rem 2rem;
+    .left {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
         text-align: center;
     }
 
+    .left img {
+        max-width: 70%;
+    }
+
+    .right * {
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+
+}
+
+.right {
+    width: 100%;
+    max-width: 100%;
 }
 
 .right,
 h1,
 p,
 a {
-    margin: 2rem 2rem;
+    margin: 2rem 0;
     text-align: left;
 }
 
@@ -180,15 +209,251 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
-    width: 60vw;
-    max-width: 60vw;
-    margin: 2rem auto;
+    width: 80vw;
+    max-width: 80vw;
+    margin: 10rem auto 40rem;
 }
 
-.team-container div {
+.team {
     background-color: hsl(219, 30%, 18%);
+    padding: 3rem;
 }
 
-.team-container div img {
-    width: 8rem;
+.team-name-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.team-name>* {
+    margin-left: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.name {
+    margin-bottom: 1rem;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.profession {
+    font-family: 'Open Sans',
+        sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: gainsboro;
+}
+
+.team-name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+.team-name-container img {
+    width: 10rem;
+    max-width: 10rem;
+    height: 11rem;
+    border-radius: 10rem;
+
+}
+
+@media only screen and (max-width:1350px) {
+    .right {
+        margin: 2rem auto;
+    }
+
+    .team-container {
+        display: grid;
+        grid-template: repeat(3, 1fr)/1fr;
+        row-gap: 2rem;
+        width: 80vw;
+        max-width: 80vw;
+        margin: 2rem auto;
+    }
+
+    .team-descr {
+        margin: 2rem auto;
+        text-align: left;
+        padding: 0;
+        min-width: 100%;
+    }
+
+    .team-name-container {
+        margin: 0 auto;
+    }
+
+
+
+}
+
+@media only screen and (max-width:600px) {
+
+
+    .team-descr {
+        text-align: center;
+    }
+
+    .team-name-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .team-name {
+        margin: 0;
+    }
+
+    .team-name>* {
+        text-align: center;
+        margin: 0 auto;
+        min-width: 100%;
+    }
+
+    .team-name-container img {
+        margin: 0 auto 2rem;
+
+    }
+
+}
+
+
+.newsletter {
+    background-color: hsl(219, 30%, 18%);
+    padding: 3rem;
+    width: 50vw;
+    margin: -20rem auto;
+    position: relative;
+
+}
+
+.newsletter>* {
+    text-align: center;
+    margin: 3rem auto;
+
+}
+
+.newsletter p {
+    font-size: 2rem;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-weight: 400;
+}
+
+input {
+    width: 50%;
+    max-width: 50%;
+    height: 2rem;
+    border-radius: 20rem;
+    text-align: left;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+input::placeholder {
+    text-align: left;
+    font-size: 1.5rem;
+
+}
+
+
+.getstarted {
+    width: 30%;
+    max-width: 30%;
+    height: 5.5rem;
+    padding: 0;
+    border-radius: 20rem;
+    background-color: hsl(176, 68%, 64%);
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    font-weight: 700;
+
+}
+
+footer {
+    background-color: hsl(216, 53%, 9%);
+
+}
+
+.footercontainer {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding-top: 40rem;
+    text-align: left;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+
+}
+
+.footercontainer .left {
+    text-align: left;
+    margin: 0 3rem;
+    width: 100%;
+
+}
+
+.footercontainer .middle {
+    width: 100%;
+    text-align: left;
+}
+
+.footercontainer .middle * {
+    display: inline;
+}
+
+
+.footercontainer .third {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.leftcolumn {
+    width: 100%;
+    max-width: 100%;
+
+}
+
+.rightcolumn {
+    width: 100%;
+    max-width: 100%;
+
+}
+
+@media only screen and (max-width:1350px) {
+
+    input {
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .getstarted {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .team-container {
+
+        margin: 10rem auto 40rem;
+    }
+
+    .footercontainer {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
 }
