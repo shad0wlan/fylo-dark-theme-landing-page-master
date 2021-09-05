@@ -345,6 +345,12 @@ a {
     font-weight: 400;
 }
 
+@media only screen and (max-width:800px) {
+    .newsletter p {
+        font-size: 1rem;
+    }
+}
+
 input {
     width: 50%;
     max-width: 50%;
@@ -450,6 +456,20 @@ footer {
     .footercontainer {
         flex-direction: column;
         margin: 0 auto;
+
     }
 
 }
+
+@media only screen and (max-width:800px) {
+    .newsletter p {
+        font-size: 1rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .navigation ul {
+        margin-top: 2rem;
+    }
